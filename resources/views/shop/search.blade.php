@@ -11,12 +11,6 @@
 
                         <li><a href="/collections" target="_self">Danh mục</a></li>
 
-
-
-                        <li class="active"><span>{{$category->name}}</span></li>
-
-
-
                     </ol>
                 </div>
             </div>
@@ -32,7 +26,7 @@
                 <div class="col-lg-12 visible-sm visible-xs">
                     <div class="visible-sm visible-xs">
                         <h1 class="title-sm" >
-                            {{$category->name}}
+{{--                            {{$category->name}}--}}
                         </h1>
                     </div>
 
@@ -73,65 +67,10 @@
                     </div>
 
                 </div>
-                <div class=" col-md-3 col-sm-12 col-xs-12 leftsidebar-col" data-sticky_column >
-                    <div class="group_sidebar">
-
-                        <div  class="list-group navbar-inner ">
-
-
-                            <div class="mega-left-title btn-navbar title-hidden-sm">
-                                <h3 class="sb-title">Danh mục </h3>
-                            </div>
-
-                            <ul class="nav navs sidebar menu" id='cssmenu' style="width: 100%;padding: 0">
-
-
-
-
-                                <li class="item  first">
-                                    <a href="/collections/onsale">
-                                        <span>Sản phẩm khuyến mãi</span>
-                                    </a>
-                                </li>
-
-
-
-
-
-                                <li class="item  ">
-                                    <a href="/collections/hot-products">
-                                        <span>Sản phẩm nổi bật</span>
-                                    </a>
-                                </li>
-
-
-
-
-
-                                <li class="item  last">
-                                    <a href="/collections/all">
-                                        <span>Tất cả sản phẩm</span>
-                                    </a>
-                                </li>
-
-
-                            </ul>
-
-                        </div>
-
-                        <!-- Banner quảng cáo -->
-                        <div class="list-group_l banner-left hidden-sm hidden-xs">
-
-                            <a href="">
-                                <img
-                                    src="/frontend/theme.hstatic.net/1000177652/1000229231/14/left_image_ad.jpg?v=90">
-                            </a>
-
-                        </div>
-                    </div>
-
-                </div>
-                <div class="content-col col-md-9 col-sm-12 col-xs-12" data-sticky_column>
+                <h1>
+                    <span style="font-size: 25px">Tìm thấy <strong style="">{{ $totalResult }}</strong>  kết quả</span>
+                </h1>
+                <div class="content-col col-md-12 col-sm-12 col-xs-12" data-sticky_column>
                     <div class="row">
                         <div class="main-content">
                             <div class="col-md-12 hidden-sm hidden-xs">
@@ -139,7 +78,7 @@
                                     <div class="row">
                                         <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                                             <h1>
-                                                {{$category->name}}
+{{--                                                {{$category->name}}--}}
                                             </h1>
                                         </div>
                                         <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
@@ -169,55 +108,55 @@
                             </div>
 
 
-                            <div class="col-md-12 col-sm-12 col-xs-12 content-product-list">
+                            <div class="col-md-9 col-sm-12 col-xs-12 content-product-list">
 
                                 <div class="row product-list">
                                     @foreach($products as $product)
-                                    <div class="col-md-4  col-sm-6 col-xs-12 pro-loop">
+                                        <div class="col-md-4  col-sm-6 col-xs-12 pro-loop">
 
-                                        <div class="product-block product-resize">
-                                            <div class="product-img image-resize view view-third">
-                                                <a href="{{ route('shop.detailProduct',['slug' => $product->slug]) }}" title="{{$product->name}}">
-                                                    <img class="" src="{{ asset($product->image) }}"  />
+                                            <div class="product-block product-resize">
+                                                <div class="product-img image-resize view view-third">
+                                                    <a href="{{ route('shop.detailProduct',['slug' => $product->slug]) }}" title="{{$product->name}}">
+                                                        <img class="" src="{{ asset($product->image) }}"  />
 
-                                                    <img  class ="second-image" src="{{ asset($product->image) }}"  alt="  " />
+                                                        <img  class ="second-image" src="{{ asset($product->image) }}"  alt="  " />
 
-                                                </a>
-                                                <div class="actionss">
-                                                    <div class="btn-cart-products">
-                                                        <a href="javascript:void(0);" onclick="add_item_show_modalCart(1012031097)">
-                                                            <i class="fa fa-shopping-bag" aria-hidden="true"></i>
-                                                        </a>
+                                                    </a>
+                                                    <div class="actionss">
+                                                        <div class="btn-cart-products">
+                                                            <a href="javascript:void(0);" onclick="add_item_show_modalCart(1012031097)">
+                                                                <i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                                            </a>
+                                                        </div>
+                                                        <div class="view-details">
+                                                            <a href="" class="view-detail" >
+                                                                <span><i class="fa fa-clone"> </i></span>
+                                                            </a>
+                                                        </div>
+                                                        <div class="btn-quickview-products">
+                                                            <a href="javascript:void(0);" class="quickview" data-handle="/products/dong-ho-longbo-mat-vuong-mau-trang-1"><i class="fa fa-eye"></i></a>
+                                                        </div>
                                                     </div>
-                                                    <div class="view-details">
-                                                        <a href="" class="view-detail" >
-                                                            <span><i class="fa fa-clone"> </i></span>
-                                                        </a>
-                                                    </div>
-                                                    <div class="btn-quickview-products">
-                                                        <a href="javascript:void(0);" class="quickview" data-handle="/products/dong-ho-longbo-mat-vuong-mau-trang-1"><i class="fa fa-eye"></i></a>
-                                                    </div>
-                                                </div>
-
-                                            </div>
-
-                                            <div class="product-detail clearfix">
-
-
-                                                <!-- sử dụng pull-left -->
-                                                <h3 class="pro-name"><a href="route('shop.detailProduct',['slug' => $product->slug]) }}" title="">{{$product->name}} </a></h3>
-                                                <div class="pro-prices">
-                                                    <p class="pro-price">{{ number_format($product->sale, 0,",",".") }} đ</p>
-                                                    <p class="pro-price-del text-left"><del class="compare-price">{{ number_format($product->price, 0,",",".") }} đ</del></p>
-
 
                                                 </div>
 
+                                                <div class="product-detail clearfix">
 
+
+                                                    <!-- sử dụng pull-left -->
+                                                    <h3 class="pro-name"><a href="route('shop.detailProduct',['slug' => $product->slug]) }}" title="">{{$product->name}} </a></h3>
+                                                    <div class="pro-prices">
+                                                        <p class="pro-price">{{ number_format($product->sale, 0,",",".") }} đ</p>
+                                                        <p class="pro-price-del text-left"><del class="compare-price">{{ number_format($product->price, 0,",",".") }} đ</del></p>
+
+
+                                                    </div>
+
+
+                                                </div>
                                             </div>
+
                                         </div>
-
-                                    </div>
                                     @endforeach
                                 </div>
 
@@ -235,6 +174,7 @@
                     </div>
                 </div>
 
+            {{ $products->appends(['tu-khoa'=>$keyword])->links()  }}
                 <!-- End collection info -->
                 <!-- Begin no products -->
 
@@ -285,3 +225,4 @@
     </section>
 
 @endsection
+

@@ -42,6 +42,8 @@ Route::get('/cap-nha-so-luong-gio-hang/{rowId}/{qty}', 'ShopController@updateCar
 
 Route::get('/dat-hang', 'ShopController@order')->name('shop.order');
 
+Route::get('/tim-kiem', 'ShopController@search')->name('shop.search');
+
 Route::post('/dat-hang', 'ShopController@postOrder')->name('shop.postOrder');
 //xoa sp trong gio
 Route::get('/xoa-san-pham-trong-gio-hang/{rowId}', 'ShopController@removeProductOnCart')->name('shop.removeProductOnCart');
@@ -61,6 +63,7 @@ Route::group(['prefix' => 'admin','as' => 'admin.','middleware' => 'checkLogin']
     Route::resource('user','UserController');
     Route::resource('setting','SettingController');
     Route::resource('article','ArticleController');
+    Route::resource('order','OrderController');
 });
 
 //Route::resource('product','BannerController');

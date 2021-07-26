@@ -173,19 +173,6 @@
                             </a>
                         </div>
                     </div>
-                    <div class="search-bar-top">
-                        <div class="search-input-top">
-                            <form  action="/search">
-                                <input type="hidden" name="type" value="product" />
-                                <input type="text" name="q" placeholder="Tìm kiếm sản phẩm ..." />
-                                <button type="submit" class="icon-search" >
-                                    <svg class="icon-search_white">
-                                        <use xmlns:xlink="./www.w3.org/1999/xlink" xlink:href=frontend/"#icon-search_white" />
-                                    </svg>
-                                </button>
-                            </form>
-                        </div>
-                    </div>
                 </div>
             </div>
             <div id="navbar" class="navbar-collapse collapse">
@@ -239,15 +226,18 @@
             <div  class="hidden-xs pull-right right-menu">
                 <ul class="nav navbar-nav pull-right">
                     <li class="col-md-12">
-
                         <div class="search-bar">
+                            <div class="search-bar-top">
+                                <div class="search-input-top">
+                                    <form action="{{route('shop.search') }}" method="get" class="form-search">
+                                        <input type="text" name="keyword" placeholder="Tìm kiếm sản phẩm ..." />
+                                        <button class="search-button" value="Search" type="submit">
+                                            <i class="fa fa-search"></i>
+                                        </button>
+                                    </form>
 
-                            <div class="">
-                                <form  action="/search">
-                                    <input type="hidden" name="type" value="product" />
-                                    <input type="text" name="q" placeholder="Tìm kiếm..."  autocomplete="off" />
-                                </form>
-                            </div>
+                                </div>
+
                         </div>
                     </li>
 

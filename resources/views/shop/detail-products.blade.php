@@ -39,13 +39,13 @@
                                 <h3 class="sb-title">Danh mục </h3>
                             </div>
 
-                            <ul class="nav navs sidebar menu" id='cssmenu'>
+                            <ul class="nav navs sidebar menu" id='cssmenu' style="width: 100%; padding: 0">
 
 
 
 
                                 <li class="item  first">
-                                    <a href="/collections/onsale">
+                                    <a href="">
                                         <span>Sản phẩm khuyến mãi</span>
                                     </a>
                                 </li>
@@ -78,6 +78,10 @@
                         <!-- Banner quảng cáo -->
                         <div class="list-group_l banner-left hidden-sm hidden-xs">
 
+                            <a href="">
+                                <img
+                                    src="/frontend/theme.hstatic.net/1000177652/1000229231/14/left_image_ad.jpg?v=90">
+                            </a>
 
                         </div>
                     </div>

@@ -14,10 +14,10 @@ class LoginController extends Controller
     {
 
 //        validate du lieu
-//        $request->validate([
-//            'email' => 'required|string|email|max:255',
-//            'password' => 'required|string|min:6'
-//        ]); //eroor
+        $request->validate([
+            'email' => 'required|string|email|max:255',
+            'password' => 'required|string|min:6'
+        ]); //eroor
 
 //        lay du lieu tu form login
         $data = [

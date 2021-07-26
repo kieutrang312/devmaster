@@ -290,4 +290,28 @@ class ShopController extends Controller
 //            'listProducts' => $listProducts, 'totalPrice' => $totalPrice
         );
     }
+
+    //tìm kiếm
+    public function search(Request $request)
+    {
+        // mục tiêu : lấy từ khóa + tìm trong bảng sản phẩm
+        // b1. Lấy từ khóa tìm kiếm
+        $keyword = trim($request->input('keyword')); //cắt khoảng trắng thừa
+        $slug = str_slug($keyword); // chuyen doi ve dang slug
+
+//        //$sql = "SELECT * FROM products WHERE is_active = 1 AND slug like '%$keyword%'";
+//        // b2 : lấy sản phẩm gần giống vs từ khóa tìm kiếm
+        $products = Product::where([
+            ['is_active', '=', 1],
+            ['slug', 'LIKE', '%' . $slug . '%']
+       ])->paginate(20);
+       $totalResult = $products->total(); // số lượng kết quả tìm kiếm
+       return view('shop.search', [
+           'products' => $products,
+           'totalResult' => $totalResult,
+           'keyword' => $keyword ? $keyword : ''
+       ]);
+    }
+
+
 }

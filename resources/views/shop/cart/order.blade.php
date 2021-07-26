@@ -196,14 +196,16 @@
                                         <div class="field ">
                                             <div class="field-input-wrapper">
                                                 <label for="dia_chi">Địa chỉ:</label>
-                                                <textarea name="address" style="border: 1px solid #cccccc" name="" id="" cols="61" rows="4"></textarea>
+                                                <br>
+                                                <textarea name="address" style="border: 1px solid #cccccc" name="" id="" cols="69" rows="4"></textarea>
                                             </div>
                                         </div>
 
                                             <div class="field ">
                                                 <div class="field-input-wrapper">
                                                     <label for="dia_chi">Ghi chú:</label>
-                                                    <textarea name="note" style="border: 1px solid #cccccc" name="" id="" cols="61" rows="8"></textarea>
+                                                    <br>
+                                                    <textarea name="note" style="border: 1px solid #cccccc" name="" id="" cols="69" rows="8"></textarea>
                                                 </div>
                                             </div>
 

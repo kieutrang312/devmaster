@@ -8,11 +8,6 @@
         Thêm Danh Mục
         <a href="{{route('admin.danh-muc.index')}}" class="btn btn-primary">Danh sách</a>
     </h1>
-    <ol class="breadcrumb">
-        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-        <li><a href="#">Forms</a></li>
-        <li class="active">General Elements</li>
-    </ol>
 </section>
 
 <!-- Main content -->

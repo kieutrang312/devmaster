@@ -39,7 +39,7 @@
 
                             <div class="form-group">
                                 <label for="exampleInputFile">Ảnh</label>
-                                <input   type="file" id="exampleInputFile" name="new_image">
+                                <input   type="file" id="exampleInputFile" name="avatar">
                                 <img width="100px" style="margin-top: 2px" src="{{asset($user->avatar)}}" alt="">
                             </div>
                             <div class="form-group">

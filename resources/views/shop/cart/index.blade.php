@@ -26,6 +26,11 @@
 				<h1 style="margin: 0">Giỏ hàng</h1>
 			</span>
             @if(count($listProducts))
+                            <div class="col-md-12 col-sm-12  col-xs-12 continue-shop">
+
+                                <a  href="/">
+                                    <i class="fa fa-reply"></i> Tiếp tục mua hàng</a>
+                            </div>
                             <table>
                                 <thead>
                                 <tr>
@@ -81,15 +86,11 @@
 
                                 <div class="col-md-6 col-sm-6 col-xs-12 cart-buttons inner-right inner-left" style="padding-left: 200px;">
                                     <div class="buttons clearfix">
-                                        <a href="{{ route('shop.cancelCart') }}" style="margin-bottom: 15px"><button type="submit" id="update-cart" class="button-default" name=""  value="" >Hủy đơn hàng</button></a>
+                                        <a href="{{ route('shop.cancelCart') }}"><button type="submit" id="update-cart" class="button-default" name=""  value="" >Hủy đơn hàng</button></a>
                                         <a href="{{ route('shop.order') }}" ><button type="submit" id="checkout" class="button-default" name="checkout" value="" >Đặt hàng</button></a>
                                     </div>
                                 </div>
-                                <div class="col-md-12 col-sm-12  col-xs-12 continue-shop">
 
-                                    <a  href="/">
-                                        <i class="fa fa-reply"></i> Tiếp tục mua hàng</a>
-                                </div>
 
                             </div>
 

@@ -372,7 +372,6 @@ font-size: 11px;
 	color: #e63535;
 }
 .search-bar form input {
-	border: 1px solid #adbac7;
 padding: 12px;
 height: 37px;
 margin-bottom: 15px;
@@ -409,9 +408,7 @@ min-width: 270px;
 
 .search-bar form:before {
 	display: block;
-	font-size: 16px;
-	content: "\f002";
-	position: absolute;
+	font-size: 16px;;
 	top: 7px;
 	right: 15px;
 	font-weight: 400;
@@ -419,7 +416,9 @@ min-width: 270px;
 	z-index: 99;
 	color: #757575;
 }
-
+.form-search {
+    background: #fff;
+}
 .search-bar form input:focus {
 	background: #fff;
 	border-color: #222;
@@ -466,7 +465,6 @@ min-width: 270px;
 	border: medium none;
 	font-size: 13px;
 	font-weight: normal;
-	height: 26px;
 	padding-left: 13px;
 	padding-top: 2px;
 	width: 80%;
@@ -503,7 +501,7 @@ svg.icon-search_white {
 	fill:#0d0c0c;
 }
 .search-input-top {
-	background: #fff none repeat scroll 0 0;
+
 	clear: both;
 	height: 31px;
 	overflow: hidden;

@@ -28,8 +28,9 @@
         <!-- sidebar menu: : style can be found in sidebar.less -->
         <ul class="sidebar-menu" data-widget="tree">
             <li class="header">MAIN NAVIGATION</li>
-
-            <li class="active">
+            <li><a href="{{ route('admin.order.index') }}"><i class="fa fa-cubes"></i> <span>QL Đơn đặt hàng</span></a></li>
+{{--            active--}}
+            <li class="">
                 <a href="{{route('admin.danh-muc.index')}}">
                     <i class=" fa fa-dashboard"></i> <span>QL Danh Mục</span>
                     <span class="pull-right-container">
